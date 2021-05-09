@@ -1,0 +1,55 @@
+<br>
+
+
+<ng-container *ngIf="loading else spinner">
+  <div class="row">
+    <div class="col-lg-7">
+  <input
+    type="text"
+    class="inputStyle"
+    placeholder="Type to filter the name column or Category"
+    (keyup)="updateFilter($event)"
+  />
+  <a href="javascript:void(0)" (click)="refresh()">
+    <span class="material-icons-outlined">
+      <img src="../../../assets/refresh.png" style="width: 35px; margin-left:1%; margin-right: 1%;" alt="Refresh">
+
+      </span>
+  </a>
+  <select class="form-select selectCategory" aria-label="Default select example" (change)="categoryChange($event.target.value)">
+    <option value="allProducts">All Products</option>
+    <option value="fashion">Fashion</option>
+    <option value="books">Books</option>
+    <option value="accessories">Accessories</option>
+
+  </select>
+</div>
+
+<div class="col-lg-5">
+  <mat-checkbox class="example-margin" [(ngModel)]="checked" (click)="selectAll()">Select All</mat-checkbox>
+  <button mat-raised-button class="inlinemargin" color="primary"  (click)="openDialog('add')" title="Add New Product">Add New</button>
+
+  <button mat-raised-button class="inlinemargin" color="warn" *ngIf="selected.length > 0" (click)="openDialog('delete')" title="Delete  Product">Delete</button>
+  <button mat-raised-button class="inlinemargin" color="primary" (click)="openDialog('update')" *ngIf="selected.length == 1" title="Update Products">Update</button>
+
+</div>
+
+</div>
+<br>
+  <ngx-datatable class="material"  [rows]="rows" [columns]="columns" #table
+  [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        rowHeight="auto"
+        [limit]="8"
+        [selected]="selected"
+        [selectionType]="'multiClick'"
+       
+        (select)="onSelect($event)"> </ngx-datatable>
+</ng-container>
+
+<ng-template #spinner>
+  <mat-spinner style= "margin: auto;"
+  ></mat-spinner>
+
+</ng-template>

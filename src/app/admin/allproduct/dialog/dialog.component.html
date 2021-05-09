@@ -1,0 +1,60 @@
+
+<ng-container *ngIf="!delete else deleteModal">
+<form #productForm="ngForm" (ngSubmit)="onFormSubmit()">
+    <div class="mb-3">
+        <label for="name" class="form-label"> Name&nbsp; <span style="color: red;"> *</span></label>
+        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" pattern="^[\w]{1}[\w 0-9]{5,25}$"
+            required name="name" #name="ngModel" [(ngModel)]="product.name">
+     
+        <div *ngIf="name.dirty || name.touched" >
+            <p *ngIf="name.errors?.required" class="alert alert-danger">Name is a required</p>
+            <p *ngIf="name.errors?.pattern" class="alert alert-danger">Name Should Not contain any Special character and should be between 5 -25 characters!</p>
+          </div>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description&nbsp; <span style="color: red;"> *</span></label>
+        <textarea type="text" class="form-control" id="exampleInputPassword1" #description="ngModel" name="description" required
+            [(ngModel)]="product.description"></textarea>
+            <div [hidden]="description.valid || description.pristine"
+                    class="alert alert-danger">
+                    Description is required
+                </div>
+    </div>
+    <div class="mb-3">
+        <label for="category" class="form-label"> Category &nbsp;<span style="color: red;"> *</span></label>
+        <select class="form-select selectCategory" aria-label="Default select example"  #category="ngModel" name="category" required
+            [(ngModel)]="product.category">
+            <option value="FASHION">Fashion</option>
+            <option value="BOOKS">Books</option>
+            <option value="ACCESSORIES">Accessories</option>
+
+        </select>
+        <div [hidden]="category.valid || category.pristine"
+                    class="alert alert-danger">
+                Category is required
+                </div>
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price &nbsp; <span style="color: red;"> *</span></label>
+        <input type="number" class="form-control" pattern="[0-9]{1,}" id="price" aria-describedby="emailHelp" #price="ngModel" name="price" required
+            [(ngModel)]="product.price">
+            <div *ngIf="price.dirty || price.touched" >
+                <p *ngIf="price.errors?.required" class="alert alert-danger">Price is a required</p>
+                <p *ngIf="price.errors?.pattern" class="alert alert-danger">Price is invalid!</p>
+              </div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="imageUrl" class="form-label"> Image Url</label>
+        <input type="text" class="form-control" id="imageUrl" aria-describedby="emailHelp" name="imageUrl"
+            [(ngModel)]="product.imageUrl">
+    </div>
+    <button type="submit" [disabled]="productForm.invalid" class="btn btn-primary">{{data.type.includes('add')? 'Add' : 'Update'}}</button>
+</form>
+</ng-container>
+
+<ng-template #deleteModal>
+    Are you Sure Wanna Delete Selected Item?
+    <button mat-button (click)="onNoClick()">No</button>
+    <button mat-button (click)="Delete()" >Yes</button>
+</ng-template>

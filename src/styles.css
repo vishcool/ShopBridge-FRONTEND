@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+
+
+.mat-form-field-infix {
+    width: 300px !important;
+}
+
+
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active .datatable-row-group {
+    background-color: #62bb55 !important;
+}
+
+.center{
+ margin: auto;
+ width: 35%;
+}
+

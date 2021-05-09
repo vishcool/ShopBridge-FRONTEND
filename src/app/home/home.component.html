@@ -1,0 +1,30 @@
+<br>
+
+<div class="container" *ngIf="products.length>0 else noProductAvailable">
+<div class="row justify-content-center">
+    <div class="col-md-4 align-self-center col-card " *ngFor="let product of products | paginate: { itemsPerPage: 6, currentPage: p }" [id]="product.id">
+<div class="card" style="width: 18rem;"  >
+    <img [src]="product.imageUrl" class="card-img-top img-responsive" [alt]="product.name">
+    <div class="card-body">
+      <h2 class="card-title">{{product.name}}</h2>
+      <p class="card-text">{{product.description}}.</p>
+      <p class="card-text">Category : {{product.category}}.</p>
+
+      <a href="javascript:void(0)" class="btn btn-primary">Buy Now</a>
+    </div>
+  </div>
+</div>
+
+</div>
+<br>
+<div class="center">
+
+<pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+</div>
+
+</div>
+<ng-template #noProductAvailable>
+No Products Available
+</ng-template>
+    
+   
