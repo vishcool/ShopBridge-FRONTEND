@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Product } from '../model/Product';
 import { ProductsService } from '../services/products.service';
 
@@ -8,6 +9,8 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
+
 export class HomeComponent implements OnInit {
   p: number = 1;
   constructor(private productService: ProductsService, private route: ActivatedRoute) { }

@@ -22,7 +22,6 @@ export class AppComponent {
 
 login(){
   this.success = this.userService.login(this.user);
-  console.log(this.success)
   this.user.admin = this.userService.isAdmin();
   }
 

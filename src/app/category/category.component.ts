@@ -19,7 +19,7 @@ export class CategoryComponent implements OnInit {
 
     this.route.params.subscribe(async (data)=>{
       this.category = data.category  
-      this.products = await this.productService.getProductsByCategory(this.category).then();
+      this.products =  this.productService.getProductsByCategory(this.category);
     })
 
 }

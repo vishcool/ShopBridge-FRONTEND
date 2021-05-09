@@ -20,7 +20,7 @@ export class ProductsService {
     return this.AllProducts;
   }
 
-  async getProductsByCategory(category: string) {
+   getProductsByCategory(category: string) {
     // this.AllProducts = await this.httpClient.get<Product[]>("assets/data.json").toPromise();
     var products = this.AllProducts.filter((data) => data.category.toLowerCase().includes(category.toLowerCase()))
     return products;

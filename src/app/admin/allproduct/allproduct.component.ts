@@ -105,6 +105,7 @@ export class AllproductComponent implements OnInit {
 
   async refresh() {
     this.loading = false;
+    this.checked = false;
 
 
 

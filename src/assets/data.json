@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Mens Dress",
-        "description": "Cool Dress For Men" ,
+        "description": "Casual outfits for Men" ,
         "price": 250,
         "imageUrl": "assets/dress.jpeg",
         "category": "FASHION"
@@ -10,7 +10,7 @@
     {
         "id": 2,
         "name": "Hat",
-        "description": "Green Colored Dress",
+        "description": "Stylish hats at lowest price!",
         "price": 350,
         "imageUrl": "assets/dress2.jpeg",
         "category": "FASHION"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Laptop",
-        "description": "MAC Laptop",
+        "description": "MAC Laptops and other higher end varieties",
         "price": 60000,
         "imageUrl": "assets/laptop.jpg",
         "category": "ACCESSORIES"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "name": "Headset",
-        "description": "boat HeadSet",
+        "description": "Branded HeadSets -boAT RockerZ,Sony,JBL",
         "price": 250,
         "imageUrl": "assets/headset.jpg",
         "category": "ACCESSORIES"
@@ -34,7 +34,7 @@
     {
         "id": 5,
         "name": "HarryPotter",
-        "description": "Cool Dres For Men",
+        "description": "A series of seven fantasy novels.",
         "price": 250,
         "imageUrl": "assets/book.jpeg",
         "category": "BOOKS"
@@ -42,14 +42,14 @@
     {
         "id": 6,
         "name": "Two States",
-        "description": "Cool Dres For Men",
+        "description": "A 2009 novel written by Chetan Bhagat.",
         "price": 250,
         "imageUrl": "assets/book1.jpeg",
         "category": "BOOKS"
     },{
         "id": 7,
         "name": "Mens Dress Two",
-        "description": " Dress For Men" ,
+        "description": " Dual combo casual outfits for men." ,
         "price": 900,
         "imageUrl": "assets/dress.jpeg",
         "category": "FASHION"
@@ -57,7 +57,7 @@
     {
         "id": 8,
         "name": "Brown Hat",
-        "description": "Cool Hat Dress",
+        "description": "Stylish COW BOY hats at lower price!", 
         "price": 390,
         "imageUrl": "assets/dress2.jpeg",
         "category": "FASHION"
@@ -65,7 +65,7 @@
     {
         "id": 9,
         "name": "Smart Watch",
-        "description": "Watch Laptop",
+        "description": "Best Apple wath series 6.",
         "price": 50000,
         "imageUrl": "assets/laptop.jpg",
         "category": "ACCESSORIES"
@@ -73,7 +73,7 @@
     {
         "id": 10,
         "name": "Table",
-        "description": "Table",
+        "description": "Desktop/Laptop Tables.",
         "price": 250,
         "imageUrl": "assets/headset.jpg",
         "category": "ACCESSORIES"
@@ -81,7 +81,7 @@
     {
         "id": 11,
         "name": "Life of PI",
-        "description": "Cool Dres For Men",
+        "description": "A Canadian philosophical novel.",
         "price": 250,
         "imageUrl": "assets/book.jpeg",
         "category": "BOOKS"
@@ -89,7 +89,7 @@
     {
         "id": 12,
         "name": "Friends",
-        "description": "Cool Dres For Men",
+        "description": "I'll be there for you: The One about Friends.",
         "price": 250,
         "imageUrl": "assets/book1.jpeg",
         "category": "BOOKS"
